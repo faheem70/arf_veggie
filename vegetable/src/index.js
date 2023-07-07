@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
-  HashRouter,
   createBrowserRouter,
   createRoutesFromElements,
   Route,
@@ -25,7 +24,7 @@ import Cancel from './pages/Cancel';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <HashRouter>
+    
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
       <Route path="menu/:filterby" element={<Menu />} />
@@ -38,7 +37,7 @@ const router = createBrowserRouter(
       <Route path="success" element={<Success />} />
       <Route path="cancel" element={<Cancel />} />
     </Route>
-  </HashRouter>
+
   )
 );
 const root = ReactDOM.createRoot(document.getElementById('root'));
